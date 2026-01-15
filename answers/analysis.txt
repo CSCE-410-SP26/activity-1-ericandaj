@@ -1,0 +1,139 @@
+1. Number of files in root directory: 32 lines of ls output at time of checking
+    (after things like stressfs)
+
+2. Available user programs in xv6: 
+cat            2 3 35392
+echo           2 4 34296
+forktest       2 5 17248
+grep           2 6 42736
+init           2 7 34768
+kill           2 8 34232
+ln             2 9 34048
+ls             2 10 41512
+mkdir          2 11 34288
+rm             2 12 34280
+sh             2 13 56112
+stressfs       2 14 35144
+usertests      2 15 186032
+grind          2 16 50496
+wc             2 17 36328
+zombie         2 18 33656
+logstress      2 19 36192
+forphan        2 20 35056
+dorphan        2 21 34496
+console        3 22 0
+
+$ usertests
+usertests starting
+test copyin: OK
+test copyout: OK
+test copyinstr1: OK
+test copyinstr2: OK
+test copyinstr3: OK
+test rwsbrk: OK
+test truncate1: OK
+test truncate2: OK
+test truncate3: OK
+test openiput: OK
+test exitiput: OK
+test iput: OK
+test opentest: OK
+test writetest: OK
+test writebig: OK
+test createtest: OK
+test dirtest: OK
+test exectest: OK
+test pipe1: OK
+test killstatus: OK
+test preempt: kill... wait... OK
+test exitwait: OK
+test reparent: OK
+test twochildren: OK
+test forkfork: OK
+test forkforkfork: OK
+test reparent2: OK
+test mem: OK
+test sharedfd: OK
+test fourfiles: OK
+test createdelete: OK
+test unlinkread: OK
+test linktest: OK
+test concreate: OK
+test linkunlink: OK
+test subdir: OK
+test bigwrite: OK
+test bigfile: OK
+test fourteen: OK
+test rmdot: OK
+test dirfile: OK
+test iref: OK
+test forktest: OK
+test sbrkbasic: OK
+test sbrkmuch: OK
+test kernmem: usertrap(): unexpected scause 0xd pid=6474
+            sepc=0x1bfc stval=0x80000000
+usertrap(): unexpected scause 0xd pid=6475
+OK
+test MAXVAplus: usertrap(): unexpected scause 0xf pid=6515
+            sepc=0x1c8c stval=0x4000000000
+            .
+            .
+            .
+OK
+test sbrklast: OK
+test sbrk8000: OK
+test badarg: OK
+test lazy_alloc: OK
+test lazy_unmap: usertrap(): unexpected scause 0xf pid=6578
+            sepc=0x4442 stval=0x13000
+            .
+            .
+            .
+usertrap(): unexpected scause 0xf pid=6637
+            sepc=0x4442 stval=0x3b013000
+usertrap(): unexpected scause 0xf pid=6638
+            sepc=0x4442 stval=0x3c013000
+usertrap(): unexpected scause 0xf pid=6639
+            sepc=0x4442 stval=0x3d013000
+usertrap(): unexpected scause 0xf pid=6640
+            sepc=0x4442 stval=0x3e013000
+usertrap(): unexpected scause 0xf pid=6641
+            sepc=0x4442 stval=0x3f013000
+OK
+test lazy_copy: OK
+test lazy_sbrk: OK
+usertests slow tests starting
+test bigdir: OK
+test manywrites: OK
+test badwrite: OK
+test execout: OK
+test diskfull: balloc: out of blocks
+balloc: out of blocks
+OK
+test outofinodes: ialloc: no inodes
+OK
+ALL TESTS PASSED
+
+Took about 3 minutes
+
+$ forktest
+fork test
+fork test OK
+
+Near instant
+
+$ stressfs
+stressfs starting
+write 0
+writwritee 1
+ write 3
+w2
+rite 4
+read
+reard
+ead
+read
+read
+
+
+Near instant
